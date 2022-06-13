@@ -20,8 +20,17 @@ const userSchema = mongoose.Schema({
     password:{
         type:String,
         required:true
+    },
+    status:{
+        type:Boolean,
+        required:true
+    },
+    yourstatus:{
+        type:String,
+        required:true
     }
 })
+
 
 userSchema.pre("save", function(next) {
     if(!this.isModified("password")) {
@@ -36,5 +45,6 @@ userSchema.methods.comparePassword = function(plaintext, callback) {
 };
 
 const userModel = mongoose.model('user',userSchema)
+
 
 module.exports = userModel

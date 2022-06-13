@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verify doc.</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="cotainer">
+    <div class="page-header">
+      <h1>Form verification</h1>
+    </div>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/index">Verify</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login">Log In</a></li>
+            <li><a href="/logout">Log Out</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid">
+      <!-- enctype="multipart/form-data" -->
+      <form method="post" action="/submit">
+        <div class="container">
+          <div class="Basic information">
+            <h3>Basic_information</h3>
+            <label for="applicant"><b>Applicant</b></label>
+            <input
+              type="text"
+              id="applicant"
+              class="form-control"
+              placeholder="Enter Username"
+              name="applicant"
+              required
+            /><br />
+
+            <label for="fathername"><b>Father's name</b></label>
+            <input
+              type="text"
+              id="fathername"
+              class="form-control"
+              placeholder="Enter fahter name"
+              name="fathername"
+              require
+            /><br />
+
+            <label for="email"><b>Email-id</b></label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Enter same email as login"
+              name="email"
+              required
+            />
+            <br />
+
+            <label for="dob"><b>Date of birth</b></label>
+            <input
+              type="date"
+              id="dob"
+              class="form-control"
+              placeholder="Date of birth"
+              name="dob"
+              required
+            />
+            <br />
+          </div>
+          <!-- 
+          <div class="Caste certificate">
+            <h3>Caste_certificate</h3>
+            <label for="casteid"><b>Caste id</b></label>
+            <input
+              type="text"
+              id="casteid"
+              class="form-control"
+              placeholder="Enter caste id"
+              name="casteid"
+              required
+            /><br />
+
+            <label for="category"><b>Caste</b></label>
+            <input
+              list="caste_list"
+              id="category"
+              class="form-control"
+              placeholder="Enter Caste"
+              name="category"
+              required
+            /><br />
+            <datalist id="caste_list">
+              <option value="General"></option>
+              <option value="SC"></option>
+              <option value="ST"></option>
+              <option value="OBC"></option>
+            </datalist>
+
+            <label for="castefile"><b>Upload caste certificate.</b></label>
+            <input
+              type="file"
+              id="castefile"
+              class="form-control-file"
+              name="castefile"
+              required
+            />
+            <br />
+          </div>
+          <div class="Income certificate">
+            <h3>Income_certificate</h3>
+
+            <label for="incomeid"><b>Income id</b></label>
+            <input
+              type="number"
+              id="incomeid"
+              class="form-control"
+              placeholder="Enter income id"
+              name="incomeid"
+              required
+            /><br />
+
+            <label for="issuedate"><b>issued date</b></label>
+            <input
+              type="date"
+              id="issuedate"
+              class="form-control"
+              placeholder="enter issuded date"
+              name="issuedate"
+              required
+            />
+            <br />
+
+            <label for="amount"><b>Family income</b></label>
+            <input
+              type="number"
+              id="amount"
+              class="form-control"
+              placeholder="Enter income"
+              name="amount"
+              required
+            /><br />
+
+            <label for="issue_by"><b>issued issuded_by name</b></label>
+            <input
+              type="text"
+              id="issue_by"
+              class="form-control"
+              placeholder="enter issuded_by name"
+              name="issue_by"
+              required
+            />
+            <br />
+
+            <label for="incomefile"><b>Upload income certificate.</b></label>
+            <input
+              type="file"
+              id="incomefile"
+              class="form-control-file"
+              name="incomefile"
+              required
+            />
+            <br />
+          </div>
+          <div class="Domicile certificate">
+            <h3>Domicile_certificate</h3>
+            <label for="domicileid"><b>Domicile id</b></label>
+            <input
+              type="number"
+              id="domicileid"
+              class="form-control"
+              placeholder="Enter Domicile id"
+              name="domicileid"
+              required
+            /><br />
+
+            <label for="dateofissued"><b>Date of issue</b></label>
+            <input
+              type="date"
+              id="dateofissued"
+              class="form-control"
+              placeholder="enter date of issue"
+              name="dateofissued"
+              required
+            />
+            <br />
+
+            <label for="state"><b>State</b></label>
+            <input
+              list="select_state"
+              id="state"
+              class="form-control"
+              placeholder="enter state name"
+              name="state"
+              required
+            />
+            <br />
+            <datalist id="select_state">
+              <option value="Andhra Pradesh"></option>
+              <option value="Arunachal Pradesh"></option>
+              <option value="Assam"></option>
+              <option value="Bihar"></option>
+              <option value="Goa"></option>
+              <option value="Gujarat"></option>
+              <option value="Haryana"></option>
+              <option value="Himachal Pradesh"></option>
+              <option value="Jammu & Kashmir"></option>
+              <option value="Karnataka"></option>
+              <option value="Kerala"></option>
+              <option value="Madhya Pradesh"></option>
+              <option value="Maharashtra"></option>
+              <option value="Manipur"></option>
+              <option value="Meghalaya"></option>
+              <option value="Mizoram"></option>
+              <option value="Nagaland"></option>
+              <option value="Orissa"></option>
+              <option value="Punjab"></option>
+              <option value="Rajasthan"></option>
+              <option value="Sikkim"></option>
+              <option value="Tamil Nadu"></option>
+              <option value="Tripura"></option>
+              <option value="Uttar Pradesh"></option>
+              <option value="West Bengal"></option>
+              <option value="Chhattisgarh"></option>
+              <option value="Uttarakhand"></option>
+              <option value="Jharkhand"></option>
+              <option value="Telangana"></option>
+            </datalist>
+
+            <label for="address"><b>Address</b></label>
+            <input
+              type="text"
+              id="address"
+              class="form-control"
+              placeholder="enter ur add    ress"
+              name="address"
+              required
+            />
+            <br />
+
+            <label for="autherizedby"><b>Autherizedby</b></label>
+            <input
+              type="text"
+              id="autherizedby"
+              class="form-control"
+              placeholder="enter autherizedby"
+              name="autherizedby"
+              required
+            />
+            <br />
+
+            <label for="domicilefile"><b>Upload income certificate.</b></label>
+            <input
+              type="file"
+              id="domicilefile"
+              class="form-control-file"
+              name="domicilefile"
+              required
+            />
+            <br />
+          </div>j
+        </div>
+         -->
+        <button
+          class="btn btn-primary btn-lg btn-block"
+          type="submit"
+          value="Submit"
+          style="
+            background-color: rgb(0, 122, 253) !important;
+            color: rgb(255, 255, 255) !important;
+            border-color: rgb(0, 122, 253) !important;
+          "
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
